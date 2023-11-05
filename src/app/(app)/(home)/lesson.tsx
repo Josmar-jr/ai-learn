@@ -48,9 +48,9 @@ export function Lesson() {
                 x2="12"
                 y1="20"
                 y2="10"
-                className={`${
-                  level !== 'ease' ? 'text-white' : 'text-white/30'
-                }`}
+                // className={`${
+                //   level !== 'ease' ? 'text-white' : 'text-white/30'
+                // }`}
               />
               <line
                 x1="18"
