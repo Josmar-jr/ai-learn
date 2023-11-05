@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes'
+import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({
   display: 'swap',
@@ -22,7 +23,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <ClerkProvider
       appearance={{
         baseTheme: dark,
-
         elements: {
           card: 'rounded-xl border bg-card text-card-foreground shadow border-border p-6',
           headerTitle: 'text-foreground',
@@ -51,7 +51,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         lang="en"
         className={`dark font-sans antialiased ${inter.variable}`}
       >
-        <body>{children}</body>
+        <body>
+          <Toaster />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   )
