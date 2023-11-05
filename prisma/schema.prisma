@@ -11,3 +11,11 @@ datasource db {
   directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migration
 }
+
+model User {
+  id          String   @unique @default(uuid())
+  external_id String   @unique
+  atributes   Json
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
