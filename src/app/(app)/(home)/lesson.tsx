@@ -1,5 +1,5 @@
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { BarChart, List, Timer } from 'lucide-react'
+import { List, Timer } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
