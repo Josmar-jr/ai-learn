@@ -74,6 +74,8 @@ async function handler(request: Request) {
       },
     })
   }
+
+  return NextResponse.json({}, { status: 200 })
 }
 
 export const GET = handler
